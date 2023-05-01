@@ -2,7 +2,7 @@ package vms_system;
 
 import java.util.Scanner;
 
-public class MenuManager {
+public class MenuManager { 
 	public static void main(String[] args) {
 		int num = 0;
 		Scanner input = new Scanner(System.in);
@@ -21,21 +21,23 @@ public class MenuManager {
 			num = input.nextInt();
 			//Take number from user
 
-			if(num==1)
+			switch(num) {
+			case 1:
 				valuableManager.addValuable();
-
-			else if(num==2)
+				break;
+			case 2:
 				valuableManager.deleteValuable();
-			
-			else if(num==3)
+				break;
+			case 3:
 				valuableManager.editValuable();
-		
-			else if(num==4)
+				break;
+			case 4:
 				valuableManager.viewValuables();
-			
-			else
+				break;
+			case 5:
 				continue;
+			}
 		}
 	}
-}
 	
+}
